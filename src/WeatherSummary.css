@@ -1,0 +1,42 @@
+.WeatherSum .icon-summary {
+  position: relative;
+  text-align: center;
+}
+
+.WeatherSum .main-overview {
+  list-style: none;
+  color: #6d6b6b;
+  padding: 0;
+}
+.WeatherSum .weather-temperature {
+  line-height: 72px;
+  text-align: center;
+}
+.WeatherSum .weather-temperature .main-temp {
+  font-size: 45px;
+  line-height: 55px;
+  position: relative;
+  left: 18px;
+}
+.WeatherSum .unit {
+  position: relative;
+  top: -26px;
+  left: 18px;
+}
+.WeatherSum a {
+  text-decoration: none;
+}
+
+@media (max-width: 400px) {
+  .WeatherSum .weather-temperature {
+    line-height: 72px;
+  }
+  .WeatherSum .main-overview {
+    font-size: 13px;
+  }
+  .WeatherSum .icon-summary {
+    position: relative;
+    right: -20px;
+    text-align: center;
+  }
+}
