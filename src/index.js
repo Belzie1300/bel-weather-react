@@ -17,7 +17,7 @@ root.render(
           <Form />
           <hr />
           <Cities />
-          <WeatherSummary />
+          <WeatherSummary defaultCity="Osaka" />
           <hr />
         </div>
         <Footer />

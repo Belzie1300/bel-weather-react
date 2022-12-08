@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import "./WeatherSummary.css";
 import axios from "axios";
 
-export default function WeatherSummary() {
-  const [loaded, setLoaded] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+export default function WeatherSummary(props) {
+  const [weatherData, setWeatherData] = useState({ loaded: false });
   function handleResponse(response) {
     setWeatherData({
+      loaded: true,
       city: response.data.city,
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
@@ -14,10 +14,9 @@ export default function WeatherSummary() {
       description: response.data.condition.description,
       icon: response.data.condition.icon_url,
     });
-    setLoaded(true);
   }
 
-  if (loaded) {
+  if (weatherData.loaded) {
     return (
       <div className="WeatherSummary">
         <div className="row ">
@@ -54,9 +53,8 @@ export default function WeatherSummary() {
       </div>
     );
   } else {
-    let city = "Osaka";
     let apiKey = "34b7a5f9e78b04eob5f3acad597t59d2";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}`;
     axios.get(apiUrl).then(handleResponse);
     return "Please wait...";
   }

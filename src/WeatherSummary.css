@@ -1,6 +1,9 @@
 .WeatherSummary .icon-summary {
   position: relative;
   text-align: center;
+  top: -30px;
+  text-transform: capitalize;
+  width: 150px;
 }
 
 .WeatherSummary .main-overview {
@@ -20,7 +23,7 @@
 }
 .WeatherSummary .unit {
   position: relative;
-  top: -26px;
+  top: -30px;
   left: 18px;
 }
 .WeatherSummary a {
