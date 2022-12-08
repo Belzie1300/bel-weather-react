@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "bootstrap/dist/css/bootstrap.css";
 import "./index.css";
 import Form from "./Form";
 import WeatherSummary from "./WeatherSummary";
@@ -13,13 +14,11 @@ root.render(
     <div className="container">
       <div className="weather-app-wrapper">
         <div className="weather-app">
-          <div className="App">
-            <Form />
-            <hr />
-            <Cities />
-            <WeatherSummary />
-            <hr />
-          </div>
+          <Form />
+          <hr />
+          <Cities />
+          <WeatherSummary />
+          <hr />
         </div>
         <Footer />
       </div>
