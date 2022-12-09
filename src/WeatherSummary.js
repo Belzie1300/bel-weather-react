@@ -19,6 +19,34 @@ export default function WeatherSummary(props) {
   if (weatherData.loaded) {
     return (
       <div className="WeatherSummary">
+        <div>
+          <form>
+            <div className="row d-flex">
+              <div className="col-4">
+                Wednesday 15:00 <br /> 9 November 2022
+              </div>
+              <div className="col-4">
+                <input
+                  type="search"
+                  placeholder="Search a city"
+                  className="form-control w-100"
+                />
+              </div>
+              <div className="col-4">
+                <input
+                  type="submit"
+                  value="Search"
+                  className="btn btn-warning w-100"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <hr />
+        <div className="Cities">
+          <h3>Currently in...</h3>
+          <h1>{weatherData.city}</h1>
+        </div>
         <div className="row ">
           <div className="col-3 icon-summary">
             <img src={weatherData.icon} alt={weatherData.description} />
