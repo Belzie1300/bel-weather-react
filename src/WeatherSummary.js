@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./WeatherSummary.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 
 export default function WeatherSummary(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
@@ -13,6 +14,7 @@ export default function WeatherSummary(props) {
       humidity: response.data.temperature.humidity,
       description: response.data.condition.description,
       icon: response.data.condition.icon_url,
+      date: new Date(response.data.time * 1000),
     });
   }
 
@@ -23,7 +25,7 @@ export default function WeatherSummary(props) {
           <form>
             <div className="row d-flex">
               <div className="col-4">
-                Wednesday 15:00 <br /> 9 November 2022
+                <FormattedDate date={weatherData.date} />
               </div>
               <div className="col-4">
                 <input
