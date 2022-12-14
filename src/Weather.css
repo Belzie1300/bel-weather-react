@@ -4,6 +4,9 @@
   top: -30px;
   text-transform: capitalize;
 }
+.Weather h1 {
+  margin-bottom: 25px;
+}
 
 .Weather .main-overview {
   list-style: none;

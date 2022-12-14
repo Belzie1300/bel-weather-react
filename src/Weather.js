@@ -3,11 +3,13 @@ import "./Weather.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import WeatherSummary from "./WeatherSummary";
+import { Oval } from "react-loader-spinner";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
   const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       loaded: true,
       city: response.data.city,
@@ -15,7 +17,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       humidity: response.data.temperature.humidity,
       description: response.data.condition.description,
-      icon: response.data.condition.icon_url,
+      icon: response.data.condition.icon,
       date: new Date(response.data.time * 1000),
     });
   }
@@ -65,6 +67,19 @@ export default function Weather(props) {
     );
   } else {
     search();
-    return "Please wait...";
+    return (
+      <Oval
+        height={80}
+        width={80}
+        color="#FFCA2C"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+        ariaLabel="oval-loading"
+        secondaryColor="#FFCA2C"
+        strokeWidth={2}
+        strokeWidthSecondary={2}
+      />
+    );
   }
 }
