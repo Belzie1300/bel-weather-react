@@ -1,43 +1,42 @@
-.WeatherSummary .icon-summary {
+.Weather .icon-summary {
   position: relative;
   text-align: center;
   top: -30px;
   text-transform: capitalize;
-  width: 150px;
 }
 
-.WeatherSummary .main-overview {
+.Weather .main-overview {
   list-style: none;
   color: #6d6b6b;
   padding: 0;
 }
-.WeatherSummary .weather-temperature {
+.Weather .weather-temperature {
   line-height: 72px;
   text-align: center;
 }
-.WeatherSummary .weather-temperature .main-temp {
+.Weather .weather-temperature .main-temp {
   font-size: 58px;
   line-height: 55px;
   position: relative;
   left: 18px;
 }
-.WeatherSummary .unit {
+.Weather .unit {
   position: relative;
   top: -30px;
   left: 18px;
 }
-.WeatherSummary a {
+.Weather a {
   text-decoration: none;
 }
 
 @media (max-width: 400px) {
-  .WeatherSummary .weather-temperature {
+  .Weather .weather-temperature {
     line-height: 72px;
   }
-  .WeatherSummary .main-overview {
+  .Weather .main-overview {
     font-size: 13px;
   }
-  .WeatherSummary .icon-summary {
+  .Weather .icon-summary {
     position: relative;
     right: -20px;
     text-align: center;
