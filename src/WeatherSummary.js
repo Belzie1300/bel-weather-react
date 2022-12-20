@@ -12,7 +12,11 @@ export default function WeatherSummary(props) {
       <br />
       <div className="row ">
         <div className="col-3 icon-summary">
-          <WeatherIcon code={props.data.icon} alt={props.data.description} />
+          <WeatherIcon
+            code={props.data.icon}
+            size={65}
+            alt={props.data.description}
+          />
           <div className="description">{props.data.description}</div>
         </div>
         <div className="col-5">
