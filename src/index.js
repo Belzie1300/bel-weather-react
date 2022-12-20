@@ -5,7 +5,6 @@ import "./index.css";
 import Weather from "./Weather";
 import Footer from "./Footer";
 import reportWebVitals from "./reportWebVitals";
-import WeatherForecast from "./WeatherForecast";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -14,7 +13,6 @@ root.render(
       <div className="weather-app-wrapper">
         <div className="weather-app">
           <Weather defaultCity="Osaka" />
-          <WeatherForecast />
         </div>
         <Footer />
       </div>

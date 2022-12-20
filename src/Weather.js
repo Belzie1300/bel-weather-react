@@ -4,12 +4,12 @@ import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import WeatherSummary from "./WeatherSummary";
 import { Oval } from "react-loader-spinner";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ loaded: false });
   const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
-    console.log(response.data);
     setWeatherData({
       loaded: true,
       city: response.data.city,
@@ -63,6 +63,7 @@ export default function Weather(props) {
         </div>
         <hr />
         <WeatherSummary data={weatherData} />
+        <WeatherForecast city={weatherData.city} />
       </div>
     );
   } else {
