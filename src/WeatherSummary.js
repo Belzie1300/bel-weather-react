@@ -1,6 +1,6 @@
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
-import TempConversion from "./TempConversion";
+import WeatherTemperature from "./WeatherTemperature";
 export default function WeatherSummary(props) {
   return (
     <div>
@@ -20,7 +20,7 @@ export default function WeatherSummary(props) {
           <div className="description">{props.data.description}</div>
         </div>
         <div className="col-5">
-          <TempConversion celsius={props.data.temperature} />
+          <WeatherTemperature celsius={props.data.temperature} />
         </div>
         <div className="col-4">
           <div>

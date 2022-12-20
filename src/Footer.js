@@ -14,6 +14,7 @@ export default function Footer() {
       <a
         href="https://app.netlify.com/sites/melodic-muffin-9bb97d/overview"
         target="_blank"
+        rel="noreferrer"
       >
         {" "}
         hosted on Netlify
